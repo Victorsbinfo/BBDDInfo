@@ -1,0 +1,4 @@
+7.En este ejercicio he buscado en vez de por apellidos que empiecen en S por nombre que empiecen por S , ademas al usar creditos
+como varchar en vez de int no sale resultados,pero la sentencia esta perfecta.
+8. lo mismo que el 7, al ser varchar no salen resultados, pero la sentencia sigue siendo perfecta.
+Gracias ^^.

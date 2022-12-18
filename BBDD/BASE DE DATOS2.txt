@@ -1,0 +1,31 @@
+CREACION DE LLAVES FORANEAS
+
+CREATE TABLE Estudiante
+(
+	IdEstudiante int primary key identity,
+	Nombre varchar(100)
+)
+
+CREATE TABLE Materia
+(
+	IdMateria int primary key identity,
+	Nombre varchar(10)
+)
+
+CREATE TABLE EstudiantesMaterias
+(
+	IdEstudianteAux int,
+	IdMateriaAux int,
+	FOREIGN KEY (IdEstudianteAux) REFERENCES Estudiante(IdEstudiante),
+	CONSTRAINT FK_IdMateriaAux FOREIGN KEY (IdMateriaAux) REFERENCES Materia(IdMateria),
+	PRIMARY KEY (IdEstudianteAux, IdMateriaAux) /*Para imperdir que un estudiante pueda tener mas de una materia*/
+)
+
+INNER JOIN
+		  (Alias)	
+SELECT t1.nombre 'Nombre ciudad', t2.nombre 'Nombre delegacion', t3.nombre 'Nombre colonia'
+	FROM "TABLA1" t1
+INNER JOIN "TABLA2" t2
+	ON t1.id = t2.id
+INNER JOIN "TABLA3" t3
+	ON t2.id = t3.id
